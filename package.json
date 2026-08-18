@@ -1,0 +1,8 @@
+{
+  "devDependencies": {
+    "inngest-cli": "^1.41.1"
+  },
+  "allowScripts": {
+    "inngest-cli@1.41.1": true
+  }
+}
