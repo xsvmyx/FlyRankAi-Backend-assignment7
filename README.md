@@ -4,6 +4,8 @@ A FastAPI application integrated with [Inngest](https://www.inngest.com/) for du
 
 The app exposes a **Reports API** that lets you request background-generated reports, poll their status, and monitors itself with a scheduled heartbeat — all powered by Inngest's durable execution engine.
 
+![Inngest Dev Server — Reports API](assets/2026-08-19-154932_screenshot.png)
+
 ---
 
 ## How to run
