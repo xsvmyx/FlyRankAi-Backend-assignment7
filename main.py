@@ -21,6 +21,12 @@ def health_check():
 
 @app.post("/reports", status_code=status.HTTP_202_ACCEPTED)
 async def create_report(payload: ReportRequest):
+    if not payload.topic or len(payload.topic.strip()) == 0:
+        raise HTTPException(
+            status_code=status.HTTP_400_BAD_REQUEST,
+            detail="Topic cannot be empty",
+        )
+        
     report_id = str(uuid.uuid4())  
     print("==============report_id", report_id)
     reports_db[report_id] = {
@@ -59,4 +65,3 @@ async def get_report(report_id: str):
     return report
 
 
-    
